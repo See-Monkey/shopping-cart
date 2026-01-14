@@ -1,3 +1,7 @@
-# React + Vite
+# Shopping Cart
 
-Title
+The Odin Project - React
+
+Testing with Vitest and RTL
+React Router
+CSS Modules
