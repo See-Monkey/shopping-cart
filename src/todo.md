@@ -1,4 +1,2 @@
-setup css imports
-setup tests files
-react-router Links
+setup test files
 react-router default page
