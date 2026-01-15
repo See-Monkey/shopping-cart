@@ -1,6 +1,8 @@
+import styles from "./Cart.module.css";
+
 export default function Cart() {
 	return (
-		<main>
+		<main className={styles.main}>
 			<div>Cart</div>
 		</main>
 	);

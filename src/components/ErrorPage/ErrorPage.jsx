@@ -1,7 +1,9 @@
+import styles from "./ErrorPage.module.css";
+
 export default function ErrorPage() {
 	return (
-		<div>
+		<main className={styles.main}>
 			<h1>Error</h1>
-		</div>
+		</main>
 	);
 }
