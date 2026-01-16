@@ -1,4 +1,109 @@
 .footer {
-	background-color: black;
-	color: white;
+	background-image: linear-gradient(var(--violet), var(--onyx));
+	display: flex;
+	color: var(--cream);
+}
+
+.footer a {
+	text-decoration: none;
+	color: var(--cream);
+}
+
+.contactContainer {
+	padding: 20px 30px 70px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.contactContainer h3 {
+	border-bottom: 1px solid var(--rose);
+}
+
+.contactEmail,
+.contactPhone {
+	display: flex;
+	gap: 10px;
+}
+
+.contactEmail img,
+.contactPhone img {
+	background-color: var(--cream);
+	border-radius: 6px;
+	padding: 3px;
+}
+
+.linkContainer {
+	padding: 30px 30px 70px 80px;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.footerImg {
+	position: relative;
+	flex: 1;
+	display: flex;
+}
+
+.footerImg::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+
+	background-image: url("../../images/andrew-draper-Q7_5VOi_xew-unsplash.jpg");
+	background-size: 250%;
+	background-position: left;
+	background-repeat: no-repeat;
+
+	/* Transparency fade */
+	mask-image: linear-gradient(
+		to right,
+		transparent 0%,
+		transparent 20%,
+		black 75%
+	);
+	-webkit-mask-image: linear-gradient(
+		to right,
+		transparent 0%,
+		transparent 20%,
+		black 75%
+	);
+
+	z-index: 0;
+}
+
+.footerImg > * {
+	position: relative;
+	z-index: 1;
+}
+
+@media (max-width: 600px) {
+	.footer {
+		flex-direction: column;
+	}
+
+	.contactContainer {
+		padding: 30px;
+	}
+
+	.linkContainer {
+		padding: 30px;
+		padding-bottom: 150px;
+	}
+
+	.footerImg::before {
+		mask-image: linear-gradient(
+			to bottom,
+			transparent 0%,
+			transparent 30%,
+			black 75%
+		);
+		-webkit-mask-image: linear-gradient(
+			to bottom,
+			transparent 0%,
+			transparent 30%,
+			black 75%
+		);
+	}
 }

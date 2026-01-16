@@ -27,7 +27,7 @@ export default function Header() {
 				<button
 					className={styles.menuBtn}
 					onClick={() => setNavOpen((open) => !open)}
-					aria-label="toggle navigation"
+					aria-label="Toggle navigation"
 					aria-expanded={navOpen}
 				>
 					<img src={menuIcon} alt="" className={styles.menuIcon} />

@@ -67,3 +67,13 @@ h6 {
 	--coffee: #1a0f13;
 	--onyx: #0b090a;
 }
+
+#root {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex: 1;
+}
