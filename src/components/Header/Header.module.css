@@ -46,9 +46,11 @@
 	font-family: "Gravitas One", sans-serif;
 }
 
-.menuIcon {
+.menuBtn {
 	display: none;
 	padding: 30px;
+	background-color: transparent;
+	border: none;
 }
 
 .nav {
@@ -115,13 +117,26 @@
 		height: 50px;
 	}
 
-	.menuIcon {
+	.menuBtn {
 		display: block;
 	}
 
 	.nav {
 		flex-direction: column;
+		padding: 0;
+		max-height: 0;
+		overflow: hidden;
+		opacity: 0;
+		transition: max-height 0.3s ease, opacity 0.2s ease;
+	}
+	.navOpen {
+		max-height: 300px;
+		opacity: 1;
 		padding: 10px;
+	}
+
+	.cartLink img {
+		display: none;
 	}
 }
 
