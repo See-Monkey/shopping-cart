@@ -1,6 +1,5 @@
 build and style header
 build and style footer
-collect icons
 collect carousel images
 build image carousel
 build shop item display
