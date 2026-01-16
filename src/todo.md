@@ -1,5 +1,3 @@
-start building out api fetch
-determine global color scheme
 build and style header
 build and style footer
 collect icons

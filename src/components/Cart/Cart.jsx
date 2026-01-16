@@ -2,7 +2,7 @@ import { useOutletContext } from "react-router";
 import styles from "./Cart.module.css";
 
 export default function Cart() {
-	const { productArray } = useOutletContext();
+	const { products } = useOutletContext();
 
 	return (
 		<main className={styles.main}>

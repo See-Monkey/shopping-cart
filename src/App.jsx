@@ -6,20 +6,21 @@ import fetchProducts from "./functions/fetchProducts.js";
 
 function App() {
 	const [loading, setLoading] = useState(true);
-	const [productArray, setProductArray] = useState([]);
+	const [products, setProducts] = useState([]);
+	const [cart, setCart] = useState([]);
 
 	useEffect(() => {
 		async function getProducts() {
 			setLoading(true);
 
 			const data = await fetchProducts();
-			setProductArray(data);
+			setProducts(data);
 			setLoading(false);
 		}
 		getProducts();
 	}, []);
 
-	const outletContext = { loading, productArray };
+	const outletContext = { loading, products };
 
 	return (
 		<>
