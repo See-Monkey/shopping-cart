@@ -1,0 +1,74 @@
+.itemContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	align-items: flex-start;
+	background-image: linear-gradient(var(--white), var(--apricot));
+	max-width: 350px;
+	padding: 20px 12px 30px;
+	border-radius: 6px;
+	border-right: 4px solid var(--violet);
+	border-bottom: 4px solid var(--onyx);
+	border-top: 4px solid var(--peach);
+	border-left: 4px solid var(--rose);
+	font-family: "Roboto", sans-serif;
+}
+
+.itemImg {
+	height: 220px;
+	aspect-ratio: 1;
+	padding: 12px;
+	align-self: center;
+}
+
+.ratingContainer {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding-left: 20px;
+}
+
+.priceQtyContainer {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20px;
+}
+
+.qtyContainer {
+	display: flex;
+}
+
+.itemQty {
+	width: 55px;
+	text-align: center;
+	border-radius: 10px 0 0 10px;
+}
+
+.itemQtyPlusMinus {
+	display: flex;
+	flex-direction: column;
+}
+
+.itemQtyPlusMinus button {
+	padding: 1px;
+}
+
+.plusBtn {
+	border-radius: 0 8px 0 0;
+}
+
+.minusBtn {
+	border-radius: 0 0 8px 0;
+}
+
+.itemQtyPlusMinus img {
+	height: 18px;
+}
+
+.addBtn {
+	align-self: flex-end;
+	margin-right: 20px;
+	border-radius: 8px;
+}

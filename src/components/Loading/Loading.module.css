@@ -1,0 +1,15 @@
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.loadingContainer {
+	font-family: "Roboto", sans-serif;
+	text-align: center;
+	border-radius: 8px;
+	box-shadow: 5px 5px 10px var(--coffee);
+	padding: 20px;
+	background-color: var(--apricot);
+	color: var(--coffee);
+}
