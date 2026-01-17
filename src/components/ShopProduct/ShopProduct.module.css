@@ -16,6 +16,11 @@
 	font-family: "Roboto", sans-serif;
 }
 
+.itemContainer a {
+	text-decoration: none;
+	color: var(--onyx);
+}
+
 .topContainer {
 	width: 100%;
 	display: flex;
