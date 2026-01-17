@@ -1,5 +1,6 @@
 import { useOutletContext } from "react-router";
 import styles from "./Shop.module.css";
+import RatingStars from "../../components/RatingStars/RatingStars.jsx";
 
 export default function Shop() {
 	const { loading, products } = useOutletContext();
@@ -9,6 +10,7 @@ export default function Shop() {
 	return (
 		<main className={styles.main}>
 			<div>Shop</div>
+			<RatingStars rating={4.3} />
 		</main>
 	);
 }

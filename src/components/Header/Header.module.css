@@ -5,6 +5,7 @@
 	justify-content: space-between;
 	align-items: center;
 	font-family: "Roboto", sans-serif;
+	border-bottom: 2px solid var(--plum);
 }
 
 .headerMobile {

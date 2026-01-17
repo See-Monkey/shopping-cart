@@ -1,4 +1,3 @@
-build and style footer
 collect carousel images
 build image carousel
 build shop item display
