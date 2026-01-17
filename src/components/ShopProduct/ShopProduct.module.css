@@ -43,61 +43,18 @@
 	padding-left: 20px;
 }
 
-.bottomContainer {
+.priceCartControlsContainer {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 8px;
-}
-
-.priceQtyContainer {
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0 20px;
+	position: relative;
 }
 
 .price {
 	font-family: "Roboto";
 	font-weight: 500;
 	font-size: 22px;
-}
-
-.qtyContainer {
-	display: flex;
-}
-
-.itemQty {
-	width: 55px;
-	text-align: center;
-	border-radius: 10px 0 0 10px;
-}
-
-.itemQtyPlusMinus {
-	display: flex;
-	flex-direction: column;
-}
-
-.itemQtyPlusMinus button {
-	padding: 1px;
-}
-
-.plusBtn {
-	border-radius: 0 8px 0 0;
-}
-
-.minusBtn {
-	border-radius: 0 0 8px 0;
-}
-
-.itemQtyPlusMinus img {
-	height: 18px;
-}
-
-.addBtn {
-	align-self: flex-end;
-	margin-right: 20px;
-	border-radius: 8px;
+	position: absolute;
 }

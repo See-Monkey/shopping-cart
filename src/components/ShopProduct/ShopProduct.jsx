@@ -1,8 +1,7 @@
 import { Link } from "react-router";
 import RatingStars from "../RatingStars/RatingStars.jsx";
 import styles from "./ShopProduct.module.css";
-import plusIcon from "../../icons/plus-square.svg";
-import minusIcon from "../../icons/minus-square.svg";
+import CartControls from "../CartControls/CartControls.jsx";
 
 export default function ShopProduct({ item }) {
 	return (
@@ -16,22 +15,9 @@ export default function ShopProduct({ item }) {
 				</div>
 			</Link>
 
-			<div className={styles.bottomContainer}>
-				<div className={styles.priceQtyContainer}>
-					<p className={styles.price}>${item.price.toFixed(2)}</p>
-					<div className={styles.qtyContainer}>
-						<input type="text" className={styles.itemQty} />
-						<div className={styles.itemQtyPlusMinus}>
-							<button className={styles.plusBtn}>
-								<img src={plusIcon} alt="Plus" />
-							</button>
-							<button className={styles.minusBtn}>
-								<img src={minusIcon} alt="Minus" />
-							</button>
-						</div>
-					</div>
-				</div>
-				<button className={styles.addBtn}>ADD TO CART</button>
+			<div className={styles.priceCartControlsContainer}>
+				<p className={styles.price}>${item.price.toFixed(2)}</p>
+				<CartControls cartQty={0} />
 			</div>
 		</div>
 	);

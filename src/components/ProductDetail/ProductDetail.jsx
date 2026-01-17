@@ -2,8 +2,7 @@ import { useParams, useOutletContext } from "react-router";
 import styles from "./ProductDetail.module.css";
 import Loading from "../Loading/Loading.jsx";
 import RatingStars from "../RatingStars/RatingStars.jsx";
-import plusIcon from "../../icons/plus-square.svg";
-import minusIcon from "../../icons/minus-square.svg";
+import CartControls from "../CartControls/CartControls.jsx";
 
 export default function ProductDetail() {
 	const { productId } = useParams();
@@ -19,26 +18,19 @@ export default function ProductDetail() {
 
 			{!loading && product && (
 				<div className={styles.productContainer}>
-					<img src={product.image} alt={product.title} />
+					<img
+						src={product.image}
+						alt={product.title}
+						className={styles.productImg}
+					/>
 					<div className={styles.infoContainer}>
 						<h1>{product.title}</h1>
 						<RatingStars rating={product.rating.rate} />
 						<p>{product.description}</p>
-						<div className={styles.priceQtyContainer}>
+						<div className={styles.priceCartControlsContainer}>
 							<p className={styles.price}>${product.price.toFixed(2)}</p>
-							<div className={styles.qtyContainer}>
-								<input type="text" className={styles.itemQty} />
-								<div className={styles.itemQtyPlusMinus}>
-									<button className={styles.plusBtn}>
-										<img src={plusIcon} alt="Plus" />
-									</button>
-									<button className={styles.minusBtn}>
-										<img src={minusIcon} alt="Minus" />
-									</button>
-								</div>
-							</div>
+							<CartControls />
 						</div>
-						<button className={styles.addBtn}>ADD TO CART</button>
 					</div>
 				</div>
 			)}

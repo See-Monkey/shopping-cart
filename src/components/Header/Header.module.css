@@ -54,6 +54,10 @@
 	border: none;
 }
 
+.menuBtn:hover {
+	cursor: pointer;
+}
+
 .nav {
 	padding: 40px;
 	display: flex;

@@ -1,0 +1,50 @@
+.cartControls {
+	align-self: flex-end;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 12px;
+}
+
+.qtyContainer {
+	display: flex;
+	margin-right: 20px;
+}
+
+.itemQty {
+	width: 55px;
+	text-align: center;
+	border-radius: 10px 0 0 10px;
+}
+
+.itemQty.simple {
+	border-radius: 10px;
+	height: 48px;
+}
+
+.itemQtyPlusMinus {
+	display: flex;
+	flex-direction: column;
+}
+
+.itemQtyPlusMinus button {
+	padding: 1px;
+}
+
+.plusBtn {
+	border-radius: 0 8px 0 0;
+}
+
+.minusBtn {
+	border-radius: 0 0 8px 0;
+}
+
+.itemQtyPlusMinus img {
+	height: 18px;
+}
+
+.addBtn {
+	align-self: flex-end;
+	margin-right: 20px;
+	border-radius: 8px;
+}
