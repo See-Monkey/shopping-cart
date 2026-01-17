@@ -35,11 +35,20 @@ export default function Header() {
 			</div>
 
 			<nav className={`${styles.nav} ${navOpen ? styles.navOpen : ""}`}>
-				<Link to={"home"} onClick={() => setNavOpen(false)}>
-					Home
-				</Link>
 				<Link to={"shop"} onClick={() => setNavOpen(false)}>
-					Shop
+					Shop All
+				</Link>
+				<Link to={"shop/men"} onClick={() => setNavOpen(false)}>
+					Men
+				</Link>
+				<Link to={"shop/women"} onClick={() => setNavOpen(false)}>
+					Women
+				</Link>
+				<Link to={"shop/jewelry"} onClick={() => setNavOpen(false)}>
+					Jewelry
+				</Link>
+				<Link to={"shop/electronics"} onClick={() => setNavOpen(false)}>
+					Electronics
 				</Link>
 				<Link
 					to={"cart"}

@@ -14,6 +14,7 @@ export default function ShopProduct({ item }) {
 					<p>({item.rating.count})</p>
 				</div>
 			</div>
+
 			<div className={styles.bottomContainer}>
 				<div className={styles.priceQtyContainer}>
 					<p className={styles.price}>${item.price.toFixed(2)}</p>

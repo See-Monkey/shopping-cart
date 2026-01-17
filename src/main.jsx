@@ -16,7 +16,10 @@ const router = createBrowserRouter([
 		children: [
 			{ index: true, element: <Home /> },
 			{ path: "home", element: <Home /> },
+
 			{ path: "shop", element: <Shop /> },
+			{ path: "shop/:category", element: <Shop /> },
+
 			{ path: "cart", element: <Cart /> },
 		],
 	},
@@ -25,5 +28,5 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
 	<StrictMode>
 		<RouterProvider router={router} />
-	</StrictMode>
+	</StrictMode>,
 );
