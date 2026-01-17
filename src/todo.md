@@ -1,7 +1,12 @@
-collect carousel images
-build image carousel
-make category specific pages and add to nav
+test ProductDetail
+test ShopProduct
+test Shop
 create method to add to cart
 put real data in cartCounter and make invisible when 0 and test
-build cart item display
-build error page
+build and style Cart
+test Cart
+build and style Home
+test Home
+collect carousel images
+build image carousel
+build ErrorPage
