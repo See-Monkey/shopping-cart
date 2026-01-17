@@ -1,4 +1,29 @@
 .main {
 	background-image: linear-gradient(var(--plum), var(--rose));
+	font-family: "Roboto", sans-serif;
+	display: flex;
+}
+
+.content {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 1600px;
+}
+
+.content h1 {
+	align-self: flex-start;
+	padding: 30px;
+	color: var(--cream);
+}
+
+.productsContainer {
+	width: 100%;
 	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	justify-content: center;
+	justify-items: center;
+	gap: 14px;
+	padding-bottom: 30px;
 }

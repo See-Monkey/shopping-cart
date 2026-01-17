@@ -2,9 +2,11 @@
 	display: flex;
 	flex-direction: column;
 	gap: 8px;
+	justify-content: space-between;
 	align-items: flex-start;
 	background-image: linear-gradient(var(--white), var(--apricot));
-	max-width: 350px;
+	width: 100%;
+	max-width: 320px;
 	padding: 20px 12px 30px;
 	border-radius: 6px;
 	border-right: 4px solid var(--violet);
@@ -14,8 +16,16 @@
 	font-family: "Roboto", sans-serif;
 }
 
+.topContainer {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	align-items: flex-start;
+}
+
 .itemImg {
-	height: 220px;
+	height: 200px;
 	aspect-ratio: 1;
 	padding: 12px;
 	align-self: center;
@@ -28,12 +38,26 @@
 	padding-left: 20px;
 }
 
+.bottomContainer {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 8px;
+}
+
 .priceQtyContainer {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 20px;
+}
+
+.price {
+	font-family: "Roboto";
+	font-weight: 500;
+	font-size: 22px;
 }
 
 .qtyContainer {
