@@ -29,6 +29,14 @@
 	align-items: flex-start;
 }
 
+.topContainer h3 {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
 .itemImg {
 	height: 200px;
 	aspect-ratio: 1;
