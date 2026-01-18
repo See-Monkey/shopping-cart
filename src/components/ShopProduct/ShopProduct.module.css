@@ -40,7 +40,7 @@
 	display: flex;
 	align-items: center;
 	gap: 12px;
-	padding-left: 20px;
+	padding-left: 10px;
 }
 
 .priceCartControlsContainer {
@@ -57,4 +57,5 @@
 	font-weight: 500;
 	font-size: 22px;
 	position: absolute;
+	padding-left: 10px;
 }
