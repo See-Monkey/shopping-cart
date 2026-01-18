@@ -1,4 +1,16 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi } from "vitest";
+
+vi.mock("../../context/CartContext", () => {
+	return {
+		useCart: () => ({
+			getItemQty: vi.fn(() => 0),
+			addItem: vi.fn(),
+			updateItem: vi.fn(),
+			incrementItem: vi.fn(),
+			decrementItem: vi.fn(),
+		}),
+	};
+});
 
 describe("something truthy and falsy", () => {
 	it("true to be true", () => {
