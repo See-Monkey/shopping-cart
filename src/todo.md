@@ -1,4 +1,3 @@
-test Cart
 build and style Home
 test Home
 collect carousel images
