@@ -1,5 +1,8 @@
 .main {
 	background-image: linear-gradient(var(--white), var(--apricot));
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .productContainer {

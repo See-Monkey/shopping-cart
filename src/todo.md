@@ -1,4 +1,3 @@
-make cartCounter invisible when 0 and test
 test Cart
 build and style Home
 test Home
