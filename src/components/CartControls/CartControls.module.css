@@ -8,6 +8,7 @@
 
 .cartControls.cartVariant {
 	flex-direction: row;
+	align-items: center;
 }
 
 .qtyContainer {
@@ -55,4 +56,14 @@
 	align-self: flex-end;
 	margin-right: 20px;
 	border-radius: 8px;
+}
+
+@media (max-width: 400px) {
+	.cartControls.cartVariant {
+		flex-direction: column;
+	}
+
+	.cartVariant .qtyContainer {
+		margin-right: 0;
+	}
 }

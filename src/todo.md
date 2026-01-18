@@ -1,4 +1,4 @@
-put real data in cartCounter and make invisible when 0 and test
+make cartCounter invisible when 0 and test
 style Cart for mobile
 test Cart
 build and style Home
