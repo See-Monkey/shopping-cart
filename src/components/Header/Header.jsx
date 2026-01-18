@@ -1,12 +1,17 @@
 import { useState } from "react";
-import styles from "./Header.module.css";
 import { Link } from "react-router";
+import { useCart } from "../../context/CartContext";
+import styles from "./Header.module.css";
 import logoImg from "../../icons/icons8-shop-64.png";
 import cartIcon from "../../icons/shopping-cart.svg";
 import menuIcon from "../../icons/menu.svg";
 
 export default function Header() {
 	const [navOpen, setNavOpen] = useState(false);
+
+	const { cart } = useCart();
+
+	const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
 	return (
 		<header className={styles.header}>
@@ -58,7 +63,7 @@ export default function Header() {
 					Cart
 					<div className={styles.cartIcon}>
 						<img src={cartIcon} alt="" />
-						<div className={styles.cartCounter}>7</div>
+						<div className={styles.cartCounter}>{totalItems}</div>
 					</div>
 				</Link>
 			</nav>
