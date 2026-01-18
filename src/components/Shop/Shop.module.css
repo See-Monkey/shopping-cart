@@ -2,6 +2,7 @@
 	background-image: linear-gradient(var(--plum), var(--rose));
 	font-family: "Roboto", sans-serif;
 	display: flex;
+	justify-content: center;
 }
 
 .content {

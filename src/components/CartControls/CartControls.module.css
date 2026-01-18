@@ -6,6 +6,10 @@
 	gap: 12px;
 }
 
+.cartControls.cartVariant {
+	flex-direction: row;
+}
+
 .qtyContainer {
 	display: flex;
 	margin-right: 20px;
@@ -29,6 +33,10 @@
 
 .itemQtyPlusMinus button {
 	padding: 1px;
+}
+
+.itemQtyPlusMinus button:hover {
+	cursor: pointer;
 }
 
 .plusBtn {

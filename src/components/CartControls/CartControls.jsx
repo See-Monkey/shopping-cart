@@ -4,7 +4,7 @@ import styles from "./CartControls.module.css";
 import plusIcon from "../../icons/plus-square.svg";
 import minusIcon from "../../icons/minus-square.svg";
 
-export default function CartControls({ productId, cartQty }) {
+export default function CartControls({ productId, cartQty, variant }) {
 	const { addItem, updateItem, incrementItem, decrementItem } = useCart();
 
 	const [inputQty, setInputQty] = useState(cartQty > 0 ? String(cartQty) : "1");
@@ -47,18 +47,33 @@ export default function CartControls({ productId, cartQty }) {
 		}
 	};
 
+	const handleCartButtonClick = () => {
+		const qty = getValidatedQty();
+		if (qty === null) return;
+
+		if (!isModified) {
+			updateItem(productId, 0);
+		} else if (isModified) {
+			updateItem(productId, qty);
+		}
+	};
+
 	let buttonLabel = "ADD TO CART";
 	let buttonDisabled = false;
 
 	if (isInCart && isModified) {
 		buttonLabel = "UPDATE QUANTITY";
-	} else if (isInCart) {
+	} else if (isInCart && variant !== "cart") {
 		buttonLabel = "ADDED TO CART";
 		buttonDisabled = true;
+	} else if (isInCart && variant === "cart") {
+		buttonLabel = "REMOVE";
 	}
 
 	return (
-		<div className={styles.cartControls}>
+		<div
+			className={`${styles.cartControls} ${variant === "cart" ? styles.cartVariant : ""}`}
+		>
 			<div className={styles.qtyContainer}>
 				<input
 					type="text"
@@ -83,9 +98,10 @@ export default function CartControls({ productId, cartQty }) {
 					</div>
 				)}
 			</div>
+
 			<button
-				className={styles.addBtn}
-				onClick={handleButtonClick}
+				className={variant !== "cart" ? styles.addBtn : styles.cartUpdateBtn}
+				onClick={variant !== "cart" ? handleButtonClick : handleCartButtonClick}
 				disabled={buttonDisabled}
 			>
 				{buttonLabel}

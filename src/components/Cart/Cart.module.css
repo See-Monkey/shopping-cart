@@ -1,3 +1,88 @@
 .main {
 	background-image: linear-gradient(var(--violet), var(--berry));
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 50px 30px;
+	position: relative;
+}
+
+.shoppingCart {
+	background-image: linear-gradient(var(--white), var(--cream));
+	font-family: "Roboto", sans-serif;
+	max-width: 1250px;
+	padding: 50px 30px;
+	box-shadow: 4px 4px 8px var(--coffee);
+	display: flex;
+	flex-direction: column;
+}
+
+.shoppingCart h1 {
+	margin-bottom: 40px;
+	border-bottom: solid 2px var(--violet);
+}
+
+.cartItems {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+.cartItem {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	padding: 14px 0;
+	border-bottom: 1px solid var(--plum);
+}
+
+.cartItemImg {
+	width: 100px;
+}
+
+.cartItemTitleContainer {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.cartItemTitleContainer h2 {
+	font-size: 22px;
+}
+
+.itemValues {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-right: 50px;
+}
+
+.cartSummary {
+	max-width: 1250px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	padding-right: 50px;
+	padding-bottom: 40px;
+}
+
+.cartSummary h4 {
+	align-self: center;
+	text-align: center;
+	padding: 30px;
+}
+
+.checkoutBtn {
+	align-self: flex-end;
+	position: relative;
+	top: 70px;
+	padding: 4px 20px;
+	margin-right: 20px;
+
+	height: 40px;
+	font-weight: 600;
 }
