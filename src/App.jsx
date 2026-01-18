@@ -7,7 +7,6 @@ import fetchProducts from "./functions/fetchProducts.js";
 function App() {
 	const [loading, setLoading] = useState(true);
 	const [products, setProducts] = useState([]);
-	const [cart, setCart] = useState([]);
 
 	useEffect(() => {
 		async function getProducts() {

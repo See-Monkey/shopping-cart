@@ -3,10 +3,14 @@ import styles from "./ProductDetail.module.css";
 import Loading from "../Loading/Loading.jsx";
 import RatingStars from "../RatingStars/RatingStars.jsx";
 import CartControls from "../CartControls/CartControls.jsx";
+import { useCart } from "../../context/CartContext";
 
 export default function ProductDetail() {
 	const { productId } = useParams();
+	const numericProductId = Number(productId);
 	const { products, loading } = useOutletContext();
+	const { getItemQty } = useCart();
+	const cartQty = getItemQty(numericProductId);
 
 	const product = products.find((p) => p.id === Number(productId));
 
@@ -25,11 +29,14 @@ export default function ProductDetail() {
 					/>
 					<div className={styles.infoContainer}>
 						<h1>{product.title}</h1>
-						<RatingStars rating={product.rating.rate} />
+						<div className={styles.ratingContainer}>
+							<RatingStars rating={product.rating.rate} />
+							<p>({product.rating.count})</p>
+						</div>
 						<p>{product.description}</p>
 						<div className={styles.priceCartControlsContainer}>
 							<p className={styles.price}>${product.price.toFixed(2)}</p>
-							<CartControls />
+							<CartControls productId={numericProductId} cartQty={cartQty} />
 						</div>
 					</div>
 				</div>

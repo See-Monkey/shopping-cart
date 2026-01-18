@@ -31,6 +31,12 @@
 	align-self: center;
 }
 
+.ratingContainer {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
 .priceCartControlsContainer {
 	position: relative;
 }
