@@ -63,7 +63,9 @@ export default function Header() {
 					Cart
 					<div className={styles.cartIcon}>
 						<img src={cartIcon} alt="" />
-						<div className={styles.cartCounter}>{totalItems}</div>
+						{totalItems > 0 && (
+							<div className={styles.cartCounter}>{totalItems}</div>
+						)}
 					</div>
 				</Link>
 			</nav>

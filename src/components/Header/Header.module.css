@@ -89,10 +89,12 @@
 	display: flex;
 	align-items: center;
 	height: 50px;
+	width: 26px;
 }
 
 .cartIcon img {
 	height: 26px;
+	width: 26px;
 }
 
 .cartCounter {

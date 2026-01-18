@@ -62,6 +62,21 @@
 	text-align: center;
 }
 
+.qtyContainer,
+.priceContainer,
+.extPriceContainer {
+	display: flex;
+	flex-direction: column;
+}
+
+.qtyContainer {
+	padding: 20px;
+}
+
+.qtyContainer h3 {
+	align-self: flex-start;
+}
+
 .cartSummary {
 	max-width: 1250px;
 	display: flex;
