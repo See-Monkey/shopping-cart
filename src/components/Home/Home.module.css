@@ -2,5 +2,6 @@
 	background-image: linear-gradient(var(--berry), var(--peach));
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
+	padding: 20px;
 }
