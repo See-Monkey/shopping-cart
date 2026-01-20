@@ -57,9 +57,6 @@ describe("ImageCarousel (CSS-module safe)", () => {
 
 	it("navigates to slide when dot is clicked", () => {
 		render(<ImageCarousel images={images} />);
-		const dots = screen
-			.getAllByRole("button")
-			.filter((btn) => btn.getAttribute("aria-current") === "true");
 
 		// Click the third dot
 		const allDots = screen

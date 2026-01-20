@@ -1,7 +1,9 @@
 .main {
 	background-image: linear-gradient(var(--berry), var(--peach));
 	display: flex;
-	justify-content: center;
-	align-items: flex-start;
+	flex-direction: column;
+	gap: 30px;
+	justify-content: flex-start;
+	align-items: center;
 	padding: 20px;
 }
