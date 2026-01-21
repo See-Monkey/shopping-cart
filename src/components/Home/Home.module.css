@@ -44,10 +44,69 @@
 	justify-content: space-around;
 }
 
-.toThe {
+.to,
+.the {
 	font-family: "Gravitas One", serif;
 	text-align: center;
 	font-size: 40px;
+}
+
+.to {
+	animation: toSquiggle linear forwards;
+	animation-timeline: view();
+	animation-range: 0% calc(100% - 250px);
+}
+.the {
+	animation: theSquiggle linear forwards;
+	animation-timeline: view();
+	animation-range: 0% calc(100% - 250px);
+}
+
+@keyframes toSquiggle {
+	0% {
+		transform: translateX(0px);
+	}
+	10% {
+		transform: translateX(-10px);
+	}
+	30% {
+		transform: translateX(10px);
+	}
+	50% {
+		transform: translateX(-20px);
+	}
+	70% {
+		transform: translateX(10px);
+	}
+	90% {
+		transform: translateX(-10px);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+}
+@keyframes theSquiggle {
+	0% {
+		transform: translateX(0px);
+	}
+	10% {
+		transform: translateX(10px);
+	}
+	30% {
+		transform: translateX(-10px);
+	}
+	50% {
+		transform: translateX(20px);
+	}
+	70% {
+		transform: translateX(-10px);
+	}
+	90% {
+		transform: translateX(10px);
+	}
+	100% {
+		transform: translateX(0px);
+	}
 }
 
 .toTheContainer {
@@ -76,6 +135,10 @@
 		transform: scale(1);
 	}
 
+	55% {
+		transform: scale(0.8);
+	}
+
 	100% {
 		transform: scale(1.25);
 	}
@@ -94,8 +157,12 @@
 		transform: scale(1);
 	}
 
+	50% {
+		transform: scale(1.5);
+	}
+
 	100% {
-		transform: scale(1.25);
+		transform: scale(1.2);
 	}
 }
 
@@ -164,4 +231,48 @@
 
 .homeContent li a {
 	text-decoration: none;
+}
+
+@media (max-width: 950px) {
+	.welcome {
+		font-size: 60px;
+	}
+
+	.logoTextLittle {
+		font-size: 60px;
+	}
+
+	.logoTextBig {
+		font-size: 80px;
+	}
+
+	.logoTextShop {
+		font-size: 60px;
+	}
+}
+
+@media (max-width: 800px) {
+	.homeContent {
+		flex-direction: column;
+		gap: 30px;
+	}
+}
+
+@media (max-width: 500px) {
+	.toTheContainer {
+		margin-top: 20px;
+	}
+
+	.toTheLogoContainer {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.logoTextShop {
+		margin-top: 0;
+	}
+
+	.links ul {
+		padding: 0;
+	}
 }

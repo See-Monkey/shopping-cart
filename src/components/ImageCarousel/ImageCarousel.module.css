@@ -78,3 +78,9 @@
 .dot.active {
 	background: var(--plum);
 }
+
+@media (max-width: 550px) {
+	.imgContainer {
+		height: 500px;
+	}
+}

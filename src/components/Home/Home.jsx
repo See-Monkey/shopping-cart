@@ -29,8 +29,8 @@ export default function Home() {
 				<h1 className={styles.welcome}>Welcome</h1>
 				<div className={styles.toTheLogoContainer}>
 					<div className={styles.toTheContainer}>
-						<h2 className={styles.toThe}>to</h2>
-						<h2 className={styles.toThe}>the</h2>
+						<h2 className={styles.to}>to</h2>
+						<h2 className={styles.the}>the</h2>
 					</div>
 					<div className={styles.logoText}>
 						<h1 className={styles.logoTextLittle}>Little</h1>
