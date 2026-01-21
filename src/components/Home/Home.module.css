@@ -6,4 +6,162 @@
 	justify-content: flex-start;
 	align-items: center;
 	padding: 20px;
+	padding-bottom: 120px;
+}
+
+.animatedLogo {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 20px;
+	max-width: 1200px;
+	width: 100%;
+}
+
+.welcome {
+	font-family: "Ms Madi", cursive;
+	font-size: 160px;
+	animation: welcome linear forwards;
+	animation-timeline: view();
+	animation-range: 100px calc(100% - 250px);
+}
+
+@keyframes welcome {
+	0% {
+		transform: rotate(0deg) scale(1) translateX(0px);
+	}
+
+	100% {
+		transform: rotate(-10deg) scale(1.25) translateX(50px);
+	}
+}
+
+.toTheLogoContainer {
+	width: 100%;
+	display: flex;
+	gap: 20px;
+	align-items: flex-start;
+	justify-content: space-around;
+}
+
+.toThe {
+	font-family: "Gravitas One", serif;
+	text-align: center;
+	font-size: 40px;
+}
+
+.toTheContainer {
+	display: flex;
+	flex-direction: column;
+	margin-top: 100px;
+	margin-left: 40px;
+}
+
+.logoText {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.logoTextLittle {
+	font-family: "Roboto", sans-serif;
+	font-size: 110px;
+	animation: little linear forwards;
+	animation-timeline: view();
+	animation-range: 100px calc(100% - 250px);
+}
+
+@keyframes little {
+	0% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(1.25);
+	}
+}
+
+.logoTextBig {
+	font-family: "Gravitas One", serif;
+	font-size: 160px;
+	animation: big linear forwards;
+	animation-timeline: view();
+	animation-range: 100px calc(100% - 250px);
+}
+
+@keyframes big {
+	0% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(1.25);
+	}
+}
+
+.logoTextShop {
+	font-family: "Roboto", sans-serif;
+	font-size: 110px;
+	margin-top: -40px;
+	animation: shop linear forwards;
+	animation-timeline: view();
+	animation-range: 100px calc(100% - 250px);
+}
+
+@keyframes shop {
+	0% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(1.25);
+	}
+}
+
+.homeContent {
+	width: 100%;
+	max-width: 1200px;
+	margin-top: 120px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-image: linear-gradient(var(--peach), var(--white));
+	padding: 50px 20px 40px 20px;
+	border-radius: 24px;
+}
+
+.links {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 12px;
+	font-family: "Roboto", sans-serif;
+}
+
+.links h3 {
+	font-size: 40px;
+}
+
+.links .guaranteed {
+	font-size: 50px;
+}
+
+.links p {
+	margin-top: 16px;
+	align-self: center;
+}
+
+.homeContent ul {
+	margin-top: 50px;
+	align-self: center;
+	text-align: center;
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.homeContent li a {
+	text-decoration: none;
 }
