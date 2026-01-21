@@ -34,6 +34,22 @@
 	align-self: center;
 }
 
+.breadcrumbs {
+	display: flex;
+	gap: 14px;
+	align-items: center;
+}
+
+.breadcrumbs a {
+	text-decoration: none;
+	color: var(--berry);
+}
+
+.separator {
+	font-size: 12px;
+	color: var(--plum);
+}
+
 .ratingContainer {
 	display: flex;
 	align-items: center;

@@ -1,4 +1,4 @@
-import { useParams, useOutletContext } from "react-router";
+import { Link, useParams, useOutletContext } from "react-router";
 import styles from "./ProductDetail.module.css";
 import Loading from "../Loading/Loading.jsx";
 import RatingStars from "../RatingStars/RatingStars.jsx";
@@ -14,6 +14,27 @@ export default function ProductDetail() {
 
 	const product = products.find((p) => p.id === Number(productId));
 
+	const categoryBreadcrumbMap = {
+		"men's clothing": {
+			label: "Men's Clothing",
+			slug: "men",
+		},
+		"women's clothing": {
+			label: "Women's Clothing",
+			slug: "women",
+		},
+		jewelery: {
+			label: "Jewelry",
+			slug: "jewelry",
+		},
+		electronics: {
+			label: "Electronics",
+			slug: "electronics",
+		},
+	};
+
+	const breadcrumbCategory = product && categoryBreadcrumbMap[product.category];
+
 	return (
 		<main className={styles.main}>
 			{loading && <Loading />}
@@ -28,6 +49,17 @@ export default function ProductDetail() {
 						className={styles.productImg}
 					/>
 					<div className={styles.infoContainer}>
+						<nav className={styles.breadcrumbs}>
+							<span>
+								<Link to="/shop">Shop</Link>
+							</span>
+							<span className={styles.separator}>❯</span>
+							<span>
+								<Link to={`/shop/${breadcrumbCategory.slug}`}>
+									{breadcrumbCategory.label}
+								</Link>
+							</span>
+						</nav>
 						<h1>{product.title}</h1>
 						<div className={styles.ratingContainer}>
 							<RatingStars rating={product.rating.rate} />
