@@ -1,3 +1,28 @@
 .main {
-	background-color: rebeccapurple;
+	background-image: linear-gradient(var(--white), var(--cream));
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	justify-content: center;
+	align-items: center;
+	font-family: "Roboto", sans-serif;
+}
+
+.errorContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.errorContainer img {
+	height: 250px;
+}
+
+.errorContainer p {
+	max-width: 250px;
+}
+
+.main a {
+	text-decoration: none;
+	color: var(--berry);
 }
