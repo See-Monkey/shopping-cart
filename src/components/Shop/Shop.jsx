@@ -1,4 +1,5 @@
-import { useOutletContext, useParams } from "react-router";
+import { useOutletContext, useParams, useNavigate } from "react-router";
+import { useEffect } from "react";
 import styles from "./Shop.module.css";
 import Loading from "../Loading/Loading.jsx";
 import ShopProduct from "../../components/ShopProduct/ShopProduct.jsx";
@@ -6,6 +7,7 @@ import ShopProduct from "../../components/ShopProduct/ShopProduct.jsx";
 export default function Shop() {
 	const { loading, products } = useOutletContext();
 	const { category } = useParams();
+	const navigate = useNavigate();
 
 	const categoryMap = {
 		men: "men's clothing",
@@ -14,15 +16,21 @@ export default function Shop() {
 		electronics: "electronics",
 	};
 
+	useEffect(() => {
+		if (!loading && category && !categoryMap[category]) {
+			navigate("*", { replace: true });
+		}
+	}, [loading, category, navigate]);
+
+	if (loading) return <Loading />;
+
 	const filteredProducts = category
 		? products.filter((product) => product.category === categoryMap[category])
 		: products;
 
 	return (
 		<main className={styles.main}>
-			{loading && <Loading />}
-
-			{!loading && !category && (
+			{!category && (
 				<div className={styles.content}>
 					<h1>Men</h1>
 					<div className={styles.productsContainer}>
@@ -62,7 +70,7 @@ export default function Shop() {
 				</div>
 			)}
 
-			{!loading && category && (
+			{category && (
 				<div className={styles.content}>
 					<h1>{category.charAt(0).toUpperCase() + category.slice(1)}</h1>
 					<div className={styles.productsContainer}>
