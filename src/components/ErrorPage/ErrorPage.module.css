@@ -6,6 +6,7 @@
 	justify-content: center;
 	align-items: center;
 	font-family: "Roboto", sans-serif;
+	text-align: center;
 }
 
 .errorContainer {
@@ -25,4 +26,10 @@
 .main a {
 	text-decoration: none;
 	color: var(--berry);
+}
+
+@media (max-width: 500px) {
+	.errorContainer {
+		flex-direction: column;
+	}
 }
